@@ -31,15 +31,14 @@ def score(game):
     return result
 
 def get_value(char):
-    if char == '1' or char == '2' or char == '3' or \
-       char == '4' or char == '5' or char == '6' or \
-       char == '7' or char == '8' or char == '9':
-        return int(char)
-    elif char == 'X' or char == 'x':
+    if char == 'X' or char == 'x':
         return 10
     elif char == '/':
         return 10
     elif char == '-':
         return 0
+    char = int(char)
+    if char >= 0 or char < 10:
+        return char
     else:
         raise ValueError()
