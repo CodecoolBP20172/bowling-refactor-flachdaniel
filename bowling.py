@@ -28,8 +28,7 @@ def get_value(char):
         return 10
     elif char == '-':
         return 0
-    char = int(char)
-    if char >= 0 or char < 10:
-        return char
+    if char in "123456789":
+        return int(char)
     else:
         raise ValueError()
